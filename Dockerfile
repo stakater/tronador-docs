@@ -13,7 +13,7 @@ COPY --chown=1001:root . .
 RUN mkdocs build
 
 FROM nginxinc/nginx-unprivileged:1.23-alpine as deploy
-COPY --from=builder $HOME/application/site/ /usr/share/nginx/html/
+COPY --from=builder $HOME/application/site/ /usr/share/nginx/html/tronador/
 COPY default.conf /etc/nginx/conf.d/
 
 # set non-root user
