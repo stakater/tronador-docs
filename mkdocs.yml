@@ -1,6 +1,6 @@
 site_name: Stakater Tronador
 docs_dir: content
-site_url: https://docs.stakater.com/
+site_url: https://docs.stakater.com/tronador/
 repo_url: https://github.com/stakater/tronador-docs
 edit_uri: blob/main/content/
 use_directory_urls: false
@@ -41,15 +41,15 @@ extra:
             make our documentation better.
 nav:
     - Tronador:
-        - content/sre/tronador/index.md
-        - content/sre/tronador/environment_provisioner.md
-        - content/sre/tronador/environment.md
-        - content/sre/tronador/tronador_config.md
-        - content/sre/tronador/config_file.md
-        - content/sre/tronador/cluster_task.md
-        - content/sre/tronador/workflow.md
-        - content/sre/tronador/troubleshooting.md
-        - content/sre/tronador/changelog.md
+        - index.md
+        - environment_provisioner.md
+        - environment.md
+        - tronador_config.md
+        - config_file.md
+        - cluster_task.md
+        - workflow.md
+        - troubleshooting.md
+        - changelog.md
     - Stakater Home: https://www.stakater.com/
     - SAAP: https://www.stakater.com/saap-kubernetes-openshift
     - Consultancy: https://www.stakater.com/kubernetes-consultancy
