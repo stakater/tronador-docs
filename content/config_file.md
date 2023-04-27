@@ -69,4 +69,4 @@ The `values_from` field is used to populate the `valuesFrom` field inside the ge
 
 ### `namespaceLabels`
 
-(Optional Field) Labels mentioned here will be applied into the namespace. If they are removed from here, they will be removed from the namespace as well. Labels in the namespace that were never in this field will not be affected. A possible application of this field is compatibility with [Multi Tenant Operator](https://docs.stakater.com/mto/index.html).
+(Optional Field) Labels mentioned here will be applied into the namespace. If they are removed from here, they will be removed from the namespace as well. Labels in the namespace that were never in this field will not be affected. A possible application of this field is compatibility with [Multi Tenant Operator](https://docs.stakater.com/mto/main/index.html).

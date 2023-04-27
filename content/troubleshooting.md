@@ -33,7 +33,7 @@ Environment provisioning takes a few minutes to complete, since there is a lot o
 * If everything above looks good, then the pods might be in a failing state. Check the pods deployed to your provisioned namespace and view their events to see if there are any failures, and why. Most likely the issue is a lack of imagePullSecrets in the provisioned namespace.
 
 Those secrets can be added using [Tronador Config](./tronador_config.md) by mentioning the resources in the CR, which will deploy those resources in all DTE Namespaces.
-This can also be done by [Multi Tenant Operator's](https://docs.stakater.com/mto/index.html) [TemplateGroupInstance](https://docs.stakater.com/mto/customresources.html#5-templategroupinstance) by setting the proper label in your Tronador config file.
+This can also be done by [Multi Tenant Operator's](https://docs.stakater.com/mto/main/index.html) [TemplateGroupInstance](https://docs.stakater.com/mto/main/customresources.html#5-templategroupinstance) by setting the proper label in your Tronador config file.
 
 ## Cluster Admin support
 
