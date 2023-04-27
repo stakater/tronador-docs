@@ -21,7 +21,7 @@ Environment provisioning takes a few minutes to complete, since there is a lot o
 
 ![Relevant ArgoCD Application synced](./images/argocd.png)
 
-* Check the status of the created resources to see if they is in a good state.
+* Check the status of the created resources to see if they are in a good state.
 
 ![Verify that HR is created](./images/hr-ts.png)
 

@@ -32,7 +32,7 @@ application:
 
 ### Tekton Pipeline
 
-The Tekton Pipeline needs to watch your repo where Tronador is configured to be used, and when a PR is created or updated, it will trigger the Tekton pipeline. The pipeline will first create a docker image from the changes in your PR. It will then create an Environment CR by using the details in the config file, and replacing its `APPLICATION_IMAGE_NAME` and `APPLICATION_IMAGE_TAG` variables in the config file with the details about the created docker image. Finally it will push the Environment to your GitOps repository.
+The Tekton Pipeline needs to watch the repo where Tronador is configured, so when a PR is created or updated it will trigger the Tekton pipeline to run. The pipeline will first create a docker image from the changes in your PR. It will then create an Environment CR by using the details in the config file, and replacing its `APPLICATION_IMAGE_NAME` and `APPLICATION_IMAGE_TAG` variables in the config file with the details about the created docker image. Finally, it will push the Environment to your GitOps repository.
 
 ![Created docker image](./images/pipeline-git.png)
 
