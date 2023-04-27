@@ -42,7 +42,6 @@ extra:
 nav:
     - Tronador:
         - index.md
-        - environment_provisioner.md
         - environment.md
         - tronador_config.md
         - config_file.md
