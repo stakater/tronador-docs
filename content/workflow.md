@@ -147,7 +147,7 @@ spec:
 Secrets for the Helm chart to be deployed are currently passed along from the Tronador config file, to the Helm release.
 Secrets for Helm chart and other required resources like image pull secret can be brought into Environment owned namespaces using [Tronador Config](./tronador_config.md) CR.
 
-You can also use [Multi Tenant Operator's](https://docs.stakater.com/mto/main/index.html) [TemplateGroupInstance](https://docs.stakater.com/mto/main/customresources.html#5-templategroupinstance) to pass secrets to the namespace that will be provisioned by the Environment by setting the proper label in your Tronador config file. An example for this workflow is [provided here](https://docs.stakater.com/mto/main/usecases/deploying-templates.html#deploying-template-to-namespaces-via-templategroupinstances).
+You can also use [Multi Tenant Operator's](https://docs.stakater.com/mto/main/index.html) [TemplateGroupInstance](https://docs.stakater.com/mto/latest/how-to-guides/template-group-instance.html) to pass secrets to the namespace that will be provisioned by the Environment by setting the proper label in your Tronador config file. An example for this workflow is [provided here](https://docs.stakater.com/mto/latest/reference-guides/deploying-templates.html#deploying-template-to-namespaces-via-templategroupinstances).
 
 ### Application snapshot deployed
 
