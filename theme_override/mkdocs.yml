@@ -1,0 +1,26 @@
+site_name: Stakater Tronador
+docs_dir: content
+site_url: https://docs.stakater.com/tronador/
+repo_url: https://github.com/stakater/tronador-docs
+edit_uri: blob/main/content/
+use_directory_urls: false
+
+theme:
+  prev_next_buttons_location: none
+  logo: assets/images/favicon.svg
+  favicon: assets/images/favicon.svg
+  custom_dir: dist/_theme
+
+nav:
+  - Tronador:
+      - index.md
+      - environment.md
+      - tronador_config.md
+      - config_file.md
+      - cluster_task.md
+      - workflow.md
+      - troubleshooting.md
+      - changelog.md
+
+plugins:
+  - mermaid2
