@@ -1,6 +1,6 @@
 # Config File
 
-The Tronador config file should contain configuration elements for the `Environment` CR in yaml format. The config file will be used in conjunction with the `create-environment` cluster task to automatically create an `Environment` CR in the cluster.
+The Tronador config file should contain configuration elements for the `Environment` CR in `yaml` format. The config file will be used in conjunction with the `create-environment` cluster task to automatically create an `Environment` CR in the cluster.
 
 ```yaml
 application:
@@ -9,8 +9,8 @@ application:
     application:
       deployment:
         image:
-          repository: {{APPLICATION_IMAGE_NAME}}
-          tag: {{APPLICATION_IMAGE_TAG}}
+          repository: { { APPLICATION_IMAGE_NAME } }
+          tag: { { APPLICATION_IMAGE_TAG } }
   values_from:
     - secretKeyRef:
         name: default-values
@@ -56,12 +56,12 @@ then you must populate your `value_overrides` field as follows:
 value_overrides:
   deployment:
     image:
-      repository: {{APPLICATION_IMAGE_NAME}}
-      tag: {{APPLICATION_IMAGE_TAG}}
+      repository: { { APPLICATION_IMAGE_NAME } }
+      tag: { { APPLICATION_IMAGE_TAG } }
 ```
 
 !!! v-pre
-    Their values must also be `{{APPLICATION_IMAGE_NAME}}` and `{{APPLICATION_IMAGE_TAG}}` respectively. These keys will be replaced with values provided from the cluster task in your CI pipeline that creates images after each commit.
+Their values must also be `{{APPLICATION_IMAGE_NAME}}` and `{{APPLICATION_IMAGE_TAG}}` respectively. These keys will be replaced with values provided from the cluster task in your CI pipeline that creates images after each commit.
 
 ### `values_from`
 
