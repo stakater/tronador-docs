@@ -1,6 +1,6 @@
 # Config File
 
-The Tronador config file should contain configuration elements for the `Environment` CR in `YAML` format. The config file will be used in conjunction with the `create-environment` cluster task to automatically create an `Environment` CR in the cluster.
+The Tronador config file should contain configuration elements for the `Environment` CR in YAML format. The config file will be used in conjunction with the `create-environment` cluster task to automatically create an `Environment` CR in the cluster.
 
 ```yaml
 application:
