@@ -1,7 +1,7 @@
 # Workflow guide for Tronador
 
 !!! warning Note
-    The guide below is written as a SAAP customer's point of view. If you use Tronador independently, the guide below might not be applicable to you. However, you can still use this guide to get an idea of how the process works.
+The guide below is written as a SAAP customer's point of view. If you use Tronador independently, the guide below might not be applicable to you. However, you can still use this guide to get an idea of how the process works.
 
 For Tronador to work, you need to add support for it in your Git Repository by adding a [Tronador config file](./config_file.md). Afterwards, a Tekton pipeline needs to be setup with the [Tronador cluster task](./cluster_task.md), and a cluster task that pushes the output EP to your GitOps repository. Test environments should then be created automatically every time a PR is created or updated. The entire Dynamic Test Environment (DTE) creation process is described below.
 
@@ -22,13 +22,13 @@ application:
     application:
       deployment:
         image:
-          repository: {{APPLICATION_IMAGE_NAME}}
-          tag: {{APPLICATION_IMAGE_TAG}}
+          repository: { { APPLICATION_IMAGE_NAME } }
+          tag: { { APPLICATION_IMAGE_TAG } }
 ```
 
 ### GitHub Event
 
- GitHub (or any other repository management system) events are used to trigger the Tronador pipeline. The pipeline is triggered whenever a PR is opened for a repository that supports Tronador.
+GitHub (or any other repository management system) events are used to trigger the Tronador pipeline. The pipeline is triggered whenever a PR is opened for a repository that supports Tronador.
 
 ### Tekton Pipeline
 
@@ -110,7 +110,7 @@ spec:
       sourceRef:
         kind: GitRepository
         name: dte-master
-      version: '*'
+      version: "*"
   install:
     remediation:
       retries: 60
@@ -139,7 +139,7 @@ spec:
   ref:
     branch: master
   timeout: 20s
-  url: 'https://github.com/stakater-lab/stakater-nordmart-inventory'
+  url: "https://github.com/stakater-lab/stakater-nordmart-inventory"
 ```
 
 ### Secrets management
@@ -147,7 +147,7 @@ spec:
 Secrets for the Helm chart to be deployed are currently passed along from the Tronador config file, to the Helm release.
 Secrets for Helm chart and other required resources like image pull secret can be brought into Environment owned namespaces using [Tronador Config](./tronador_config.md) CR.
 
-You can also use [Multi Tenant Operator's](https://docs.stakater.com/mto/main/index.html) [TemplateGroupInstance](https://docs.stakater.com/mto/latest/how-to-guides/template-group-instance.html) to pass secrets to the namespace that will be provisioned by the Environment by setting the proper label in your Tronador config file. An example for this workflow is [provided here](https://docs.stakater.com/mto/latest/reference-guides/deploying-templates.html#deploying-template-to-namespaces-via-templategroupinstances).
+You can also use [Multi Tenant Operator's](https://docs.stakater.com/mto/main/index.html) [TemplateGroupInstance](https://docs.stakater.com/mto/latest/crds-api-reference/template-group-instance.html) to pass secrets to the namespace that will be provisioned by the Environment by setting the proper label in your Tronador config file. An example for this workflow is [provided here](https://docs.stakater.com/mto/latest/tutorials/distributing-resources/distributing-manifests.html#deploying-template-to-n[…]a-templategroupinstances).
 
 ### Application snapshot deployed
 
