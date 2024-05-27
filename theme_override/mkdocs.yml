@@ -8,7 +8,6 @@ theme:
   prev_next_buttons_location: none
   logo: assets/images/favicon.svg
   favicon: assets/images/favicon.svg
-  custom_dir: dist/_theme
 nav:
   - Tronador:
       - index.md
@@ -19,5 +18,3 @@ nav:
       - workflow.md
       - troubleshooting.md
       - changelog.md
-plugins:
-  - mermaid2
