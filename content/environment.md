@@ -58,7 +58,7 @@ Contains the needed details to create a GitRepository object in the cluster. All
 - **interval**: Interval at which the HelmRelease object will reconcile.
 - **ref**: Reference to the branch, tag, semver or commit to clone
 - **timeout**: Optional field to specify a timeout for Git operations like cloning.
-- **URL**: Required field that specifies the HTTP/S or SSH address of the Git repository.
+- **URL**: Required field that specifies the https or SSH address of the Git repository.
 - **secretRef**: This field will be filled by Tronador using the [TronadorConfig](./tronador_config.md) CR. `secretRef` is used to specify a name reference to a Secret in the same namespace as the GitRepository, containing authentication credentials for the Git repository.
 
 ### `release`

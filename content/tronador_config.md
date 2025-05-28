@@ -156,7 +156,7 @@ Manifests inside `secrets` are a list of k8s resources which are required in DTE
 
 ##### Basic Access Authentication
 
-To authenticate towards a Git repository over HTTPS using basic access authentication (in other words: using a username and password), the referenced Secret is expected to contain .data.username and .data.password values.
+To authenticate towards a Git repository over https using basic access authentication (in other words: using a username and password), the referenced Secret is expected to contain .data.username and .data.password values.
 
 ```yaml
 apiVersion: v1
@@ -169,9 +169,9 @@ data:
   password: <BASE64>
 ```
 
-##### HTTPS Certificate Authority
+##### https Certificate Authority
 
-To provide a Certificate Authority to trust while connecting with a Git repository over HTTPS, the referenced Secret can contain a .data.caFile value.
+To provide a Certificate Authority to trust while connecting with a Git repository over https, the referenced Secret can contain a .data.caFile value.
 
 ```yaml
 apiVersion: v1
@@ -208,5 +208,5 @@ stringData:
 - Tronador and all Environments would throw errors in case any cluster-wide resource is mentioned in the TronadorConfig.
 - If namespace is set in any resource, Tronador will ignore it and only deploy the resource to the relevant namespace (see mappings section above).
 - Tronador will only apply resources from the TronadorConfig CR present in the operator Namespace, and named `tronador-config`.
-- TronadorConfig points to default `admin` ClusterRole of OpenShift; all the namespaced resources allowed by that ClusterRole will be applied in the Namespaces.
+- TronadorConfig points to default `admin` ClusterRole of OpenShift; all the namespace allocated resources allowed by that ClusterRole will be applied in the Namespaces.
 - The Secrets mentioned under `mappings.authSecret` and `mappings.imagePullSecret` will only be created in the relevant Environments' namespaces, and not in any other namespaces. The relevant Environments are those that are based on the repositories mentioned in `mappings.repos`.
