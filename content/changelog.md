@@ -57,7 +57,7 @@
 
 ### v0.0.11
 
-- fix: fix for clusterrolebinding in chart templates
+- fix: fix for clusterRoleBinding in chart templates
 
 ### v0.0.10
 
